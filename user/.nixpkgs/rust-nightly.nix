@@ -42,7 +42,7 @@ let
           --set-rpath "${rpath}" \
           "$executable"
       done
-      for library in $out/lib/*.so $cargo/lib/*.so; do
+      for library in $out/lib/*.so; do
         patchelf --set-rpath "${rpath}" "$library"
       done
     '' else "";
